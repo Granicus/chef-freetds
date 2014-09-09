@@ -1,12 +1,12 @@
-name             'chef-freetds'
+name             'freetds'
 maintainer       'Olivier Brisse'
-maintainer_email 'ouranos@donarproject.org'
-license          'All rights reserved'
+maintainer_email 'obrisse@aioinissaydowa.com.au'
+license          'Apache 2.0'
 description      'Installs/Configures FreeTDS'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.1'
+version          '0.1.4'
 
-%w{ ubuntu debian }.each do |os|
+%w(ubuntu debian).each do |os|
   supports os
 end
 
@@ -31,7 +31,7 @@ attribute 'odbc',
   :display_name => 'ODBC support',
   :description => 'Select wether or not to build the ODBC driver',
   :default => 'false'
-  
+
 attribute 'servers',
   :display_name => 'Server list',
   :description => 'See README'
